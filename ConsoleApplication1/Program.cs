@@ -80,7 +80,8 @@ namespace ConsoleApplication1
             var sayi = askerlikyapanlar.Count();
             Func<int, int> square = x => x * x;//ilk int input olarak ikincisi out olarak belirtiyoruz
             Func<int, bool> isEqualThree = x => x == 3;//inlik int input bool dışarı vereceği değer
-            Func<int, int, int> addProcess = (x, y) => x + y;
+            Func<int, int, string> addProcess = (x, y) => (x + y).ToString();
+            var s=addProcess(1, 2);
             Action<int> write = x => Console.WriteLine($"Girmiş olduğunuz sayı{x}");
             write(3);
             Console.WriteLine(square(3));
